@@ -1,0 +1,17 @@
+const playVideo = document.querySelector('.play');
+const closeVideo = document.querySelector('.close');
+
+
+playVideo.addEventListener('click', toggleVideo);
+
+closeVideo.addEventListener('click' , toggleVideo);
+
+
+function toggleVideo(){
+    const trailer = document.querySelector('.trailer');
+    const video = document.querySelector('video');
+    trailer.classList.toggle('active');
+    video.currentTime=0;
+    video.pause();
+}
+
